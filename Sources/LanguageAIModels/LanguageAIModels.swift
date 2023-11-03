@@ -33,3 +33,36 @@ public struct LessonAPI: Codable {
     public let identifier: String
     public let verbs: [VerbAPI]
 }
+
+public class LessonSuggestionsAPI: Codable {
+    let topics: [LessonSuggestionAPI]
+}
+
+
+public class LessonSuggestionAPI: Codable, Identifiable {
+    let input: String
+    let output: String
+    let identifier: String
+    let position: Int
+    let type: String
+
+    public var id: String {
+        return identifier
+    }
+}
+
+public class LessonPlansAPI: Codable {
+    let topics: [LessonPlanAPI]
+}
+
+
+public class LessonPlanAPI: Codable, Identifiable {
+    let input: String
+    let output: String
+    let identifier: String
+    let position: Int
+
+    public var id: String {
+        return identifier
+    }
+}
