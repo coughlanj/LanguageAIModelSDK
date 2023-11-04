@@ -74,4 +74,11 @@ public class LessonPlanAPI: Codable, Identifiable {
     public var id: String {
         return identifier
     }
+    
+    public init(input: String, output: String, identifier: String, position: Int) {
+        self.input = input
+        self.output = output
+        self.identifier = identifier
+        self.position = position
+    }
 }
