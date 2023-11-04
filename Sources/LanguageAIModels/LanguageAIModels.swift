@@ -58,6 +58,10 @@ public class LessonSuggestionAPI: Codable, Identifiable {
 
 public class LessonPlansAPI: Codable {
     public let topics: [LessonPlanAPI]
+    
+    init(topics: [LessonPlanAPI]) {
+        self.topics = topics
+    }
 }
 
 
