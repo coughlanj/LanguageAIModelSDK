@@ -32,6 +32,11 @@ public class ConjugationAPI: Codable {
 public struct LessonAPI: Codable {
     public let identifier: String
     public let verbs: [VerbAPI]
+    
+    public init(identifier: String, verbs: [VerbAPI]) {
+        self.identifier = identifier
+        self.verbs = verbs
+    }
 }
 
 public class LessonSuggestionsAPI: Codable {
