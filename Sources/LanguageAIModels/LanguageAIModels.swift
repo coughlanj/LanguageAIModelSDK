@@ -43,7 +43,6 @@ public class LessonSuggestionsAPI: Codable {
     public let topics: [LessonSuggestionAPI]
 }
 
-
 public class LessonSuggestionAPI: Codable, Identifiable {
     public let input: String
     public let output: String
@@ -70,15 +69,17 @@ public class LessonPlanAPI: Codable, Identifiable {
     public let output: String
     public let identifier: String
     public let position: Int
-
+    public let icon: String
+    
     public var id: String {
         return identifier
     }
     
-    public init(input: String, output: String, identifier: String, position: Int) {
+    public init(input: String, output: String, identifier: String, position: Int, icon: String) {
         self.input = input
         self.output = output
         self.identifier = identifier
         self.position = position
+        self.icon = icon
     }
 }
